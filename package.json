@@ -6,11 +6,21 @@
   "scripts": {
     "test": "tap test.js"
   },
-  "author": "",
+  "pre-commit": ["test"],
+  "website": "https://github.com/mcollina/seneca-act-stream",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mcollina/seneca-act-stream.git"
+  },
+  "bugs": {
+    "url": "http://github.com/mcollina/seneca-act-stream/issues"
+  },
+  "author": "Matteo Collina <hello@matteocollina.com>",
   "license": "ISC",
   "devDependencies": {
     "tap": "^0.4.9",
-    "seneca": "^0.5.17"
+    "seneca": "^0.5.17",
+    "pre-commit": "0.0.7"
   },
   "dependencies": {
     "readable-stream": "^1.0.27-1",
