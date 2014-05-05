@@ -1,0 +1,19 @@
+{
+  "name": "seneca-act-stream",
+  "version": "0.0.0",
+  "description": "Seneca.act through a stream interface",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tap": "^0.4.9",
+    "seneca": "^0.5.17"
+  },
+  "dependencies": {
+    "readable-stream": "^1.0.27-1",
+    "inherits": "^2.0.1"
+  }
+}
