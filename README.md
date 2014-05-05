@@ -5,19 +5,14 @@ SenecaActStream
 Acting on Seneca through a Stream2 interface.
 
 ```js
-var seneca    = require('seneca')
-var actStream = require('seneca-act-stream')
-
-var s = seneca()
+var seneca    = require('seneca')()
+  , actStream = require('seneca-act-stream')
   , pattern = { sample: 'call' }
-  , stream  = actStream(s, pattern)
+  , stream  = actStream(seneca, pattern)
   , message = { hello: 'world' }
-  , expectedMessage = {
-        sample: 'call'
-      , hello: 'world' }
 
 function check(arrived, done) {
-  console.log('received!')
+  console.log('message received', arrived)
   done(null)
 }
 
