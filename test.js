@@ -43,3 +43,26 @@ test('calling a seneca service with a default pattern', function(t) {
 
   stream.end(message);
 })
+
+test('emits \'finish\' after the last acted message', function(t) {
+  t.plan(1)
+
+  var s = seneca()
+    , stream  = actStream(s)
+    , pattern = { sample: 'call' }
+    , message = { sample: 'call', hello: 'world' }
+    , called = false
+
+  function check(arrived, done) {
+    called = true
+    done(null)
+  }
+
+  s.add(pattern, check);
+
+  stream.on('finish', function() {
+    t.ok(called, 'seneca service called')
+  })
+
+  stream.end(message);
+})
