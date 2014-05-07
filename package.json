@@ -1,6 +1,6 @@
 {
   "name": "seneca-act-stream",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Seneca.act through a stream interface",
   "main": "index.js",
   "scripts": {
