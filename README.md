@@ -6,7 +6,7 @@ Acting on Seneca through a Stream2 interface.
 
 ```js
 var seneca    = require('seneca')()
-  , actStream = require('seneca-act-stream')
+  , actStream = require('./')
   , pattern = { sample: 'call' }
   , stream  = actStream(seneca, pattern)
   , message = { hello: 'world' }
@@ -16,7 +16,11 @@ function check(arrived, done) {
   done(null)
 }
 
-s.add(pattern, check);
+seneca.add(pattern, check);
+
+stream.on('one', function() {
+  console.log('one event')
+})
 
 stream.end(message);
 ```

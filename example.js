@@ -1,10 +1,8 @@
 
-var seneca    = require('seneca')
+var seneca    = require('seneca')()
   , actStream = require('./')
-
-var s = seneca()
   , pattern = { sample: 'call' }
-  , stream  = actStream(s, pattern)
+  , stream  = actStream(seneca, pattern)
   , message = { hello: 'world' }
 
 function check(arrived, done) {
@@ -12,6 +10,10 @@ function check(arrived, done) {
   done(null)
 }
 
-s.add(pattern, check);
+seneca.add(pattern, check);
+
+stream.on('one', function() {
+  console.log('one event')
+})
 
 stream.end(message);
