@@ -66,3 +66,23 @@ test('emits \'finish\' after the last acted message', function(t) {
 
   stream.end(message);
 })
+
+test('one event', function(t) {
+
+  var s = seneca()
+    , stream  = actStream(s)
+    , pattern = { sample: 'call' }
+    , message = { sample: 'call', hello: 'world' }
+
+  function check(arrived, done) {
+    done(null)
+  }
+
+  s.add(pattern, check);
+
+  stream.on('one', function() {
+    t.end()
+  })
+
+  stream.end(message);
+})

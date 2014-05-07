@@ -14,16 +14,34 @@ function ActStream(seneca, fixed) {
     objectMode: true,
     highWaterMark: 16
   })
+
+  var that = this
+  this._emitOnWrite = function(err) {
+    if (err)
+      that.emit('oneError', err)
+
+    that.emit('one')
+
+    var cb = that._lastCallback
+
+    if (cb) {
+      that._lastCallback = null
+      cb()
+    }
+  }
 }
 
 inherits(ActStream, Writable)
 
 ActStream.prototype._write = function write(obj, skip, callback) {
+
+  this._lastCallback = callback
+
   for (var key in this._fixed) {
     obj[key] = this._fixed[key]
   }
 
-  this.seneca.act(obj, callback)
+  this.seneca.act(obj, this._emitOnWrite)
 }
 
 module.exports = ActStream
