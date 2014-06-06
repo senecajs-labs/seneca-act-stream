@@ -25,7 +25,12 @@ stream.on('one', function() {
 stream.end(message);
 ```
 
+Acknowledgements
+----------------
+
+This project was kindly sponsored by [nearForm](http://nearform.com).
+
 License
 -------
 
-ISC
+MIT
