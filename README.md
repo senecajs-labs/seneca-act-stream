@@ -54,7 +54,7 @@ documentation, examples, extra testing, or new features please get in touch.
 This project was kindly sponsored by [nearForm](http://nearform.com).
 
 ## License
-Copyright Matteo Collina and other contributors 2015, Licensed under [MIT][].
+Copyright Matteo Collina and other contributors 2014 - 2016, Licensed under [MIT][].
 
 [gitter-badge]: https://badges.gitter.im/Join%20Chat.svg
 [gitter-url]: https://gitter.im/senecajs/seneca
