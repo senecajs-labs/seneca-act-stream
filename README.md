@@ -54,11 +54,8 @@ documentation, examples, extra testing, or new features please get in touch.
 This project was kindly sponsored by [nearForm](http://nearform.com).
 
 ## License
-Copyright Matteo Collina and other contributors 2015, Licensed under [MIT][].
+Copyright Matteo Collina and other contributors 2014 - 2016, Licensed under [MIT][].
 
-
-[travis-badge]: https://travis-ci.org/Senecajs/seneca-act-stream.png?branch=master
-[travis-url]: https://travis-ci.org/Senecajs/seneca-act-stream
 [gitter-badge]: https://badges.gitter.im/Join%20Chat.svg
 [gitter-url]: https://gitter.im/senecajs/seneca
 
@@ -66,5 +63,5 @@ Copyright Matteo Collina and other contributors 2015, Licensed under [MIT][].
 [Senecajs org]: https://github.com/senecajs/
 [senecajs.org]: http://senecajs.org/
 [Seneca.js]: https://www.npmjs.com/package/seneca
-[github issue]: https://github.com/Senecajs/seneca-act-stream/issues
+[github issue]: https://github.com/senecajs-labs/seneca-act-stream/issues
 [@senecajs]: http://twitter.com/senecajs
