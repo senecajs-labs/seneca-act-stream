@@ -7,13 +7,13 @@
     "test": "tap test.js"
   },
   "pre-commit": ["test"],
-  "website": "https://github.com/mcollina/seneca-act-stream",
+  "website": "https://github.com/senecajs-labs/seneca-act-stream",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mcollina/seneca-act-stream.git"
+    "url": "https://github.com/senecajs-labs/seneca-act-stream.git"
   },
   "bugs": {
-    "url": "http://github.com/mcollina/seneca-act-stream/issues"
+    "url": "http://github.com/senecajs-labs/seneca-act-stream/issues"
   },
   "author": "Matteo Collina <hello@matteocollina.com>",
   "license": "MIT",
